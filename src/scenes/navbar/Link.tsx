@@ -1,25 +1,11 @@
 import { SelectedPage } from "../../share/types";
 import AnchorLink from "react-anchor-link-smooth-scroll";
+import { fromSelectedPageToPageName } from "../../utilities/utils";
 
 type Props = {
     page: SelectedPage,
     selectedPage: SelectedPage,
     setSelectedPage: (value: SelectedPage) => void
-}
-
-const fromSelectedPageToPageName = (selectedPage: SelectedPage) => {
-    switch (selectedPage) {
-        case SelectedPage.Projects:
-            return 'Projects'
-        case SelectedPage.Contact:
-            return 'Contact'
-        case SelectedPage.Home:
-            return 'Home'
-        case SelectedPage.Testimonials:
-            return 'Testimonials'
-        case SelectedPage.Skills:
-            return 'Skills'
-    }
 }
 
 const Link = ({
