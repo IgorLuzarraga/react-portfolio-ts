@@ -19,7 +19,7 @@ const LandingFlipped = ({ setSelectedPage }: Props) => {
             className="md:flex justify-between items-center gap-16 md:h-full py-10"
         >
             {/* IMAGE */}
-            <LandingImg isAboveLarge={isAboveLarge} />
+            <LandingImg isAboveLarge={isAboveLarge} archPosition="left-10" />
 
             {/* TEXT AND CONTACT */}
             <div className="z-30 basis-2/5 mt-12 md:mt-32">

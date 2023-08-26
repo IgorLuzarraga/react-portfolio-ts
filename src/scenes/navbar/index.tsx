@@ -35,13 +35,14 @@ const NavBar = ({ isTopOfPage, selectedPage, setSelectedPage, isAppFlipped, setI
             <div className="flex items-center justify-between mx-auto w-5/6">
                 <h4 className="font-playfair text-3xl font-bold">JE</h4>
 
-                <BtnFlipApp isAppFlipped={isAppFlipped} setIsAppFlipped={setIsAppFlipped} />
-
                 {isAboveMediumScreens
-                    ? <NavAvobeMediumScreen
-                        selectedPage={selectedPage}
-                        setSelectedPage={setSelectedPage}
-                    />
+                    ? <>
+                        <BtnFlipApp isAppFlipped={isAppFlipped} setIsAppFlipped={setIsAppFlipped} />
+                        <NavAvobeMediumScreen
+                            selectedPage={selectedPage}
+                            setSelectedPage={setSelectedPage}
+                        />
+                    </>
                     : <NavSmallScreen
                         selectedPage={selectedPage}
                         setSelectedPage={setSelectedPage}
