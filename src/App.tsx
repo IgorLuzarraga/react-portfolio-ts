@@ -5,6 +5,7 @@ import useMediaQuery from "./hooks/useMediaQuery";
 import DotGroup from "./components/DotGroup";
 import LineGradient from "./components/LineGradient";
 import { motion } from "framer-motion"
+import Landing from "./scenes/Landing";
 
 function App() {
   const [selectedPage, setSelectedPage] = useState<SelectedPage>(SelectedPage.Home)
@@ -41,8 +42,8 @@ function App() {
           // amount="all"
           onViewportEnter={() => setSelectedPage(SelectedPage.Home)}
         >
-          {/* <Landing setSelectedPage={setSelectedPage} /> */}
-          Landing
+          <Landing setSelectedPage={setSelectedPage} />
+
         </motion.div>
       </div>
       <LineGradient />
