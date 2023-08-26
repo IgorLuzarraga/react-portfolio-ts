@@ -10,7 +10,7 @@ type Props = {
     setSelectedPage: (value: SelectedPage) => void
 }
 
-const LandingFliped = ({ setSelectedPage }: Props) => {
+const LandingFlipped = ({ setSelectedPage }: Props) => {
     const isAboveLarge = useMediaQuery("(min-width: 1060px)")
 
     return (
@@ -37,4 +37,4 @@ const LandingFliped = ({ setSelectedPage }: Props) => {
     );
 };
 
-export default LandingFliped;
+export default LandingFlipped;

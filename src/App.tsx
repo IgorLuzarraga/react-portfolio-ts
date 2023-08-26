@@ -5,8 +5,8 @@ import useMediaQuery from "./hooks/useMediaQuery";
 import DotGroup from "./components/DotGroup";
 import LineGradient from "./components/LineGradient";
 import { motion } from "framer-motion"
-// import Landing from "./scenes/landing/Landing";
-import LandingFliped from "./scenes/landing/LandingFliped";
+import Landing from "./scenes/landing/Landing";
+import LandingFlipped from "./scenes/landing/LandingFlipped";
 import MySkills from "./scenes/MySkills";
 
 
@@ -14,6 +14,7 @@ function App() {
   const [selectedPage, setSelectedPage] = useState<SelectedPage>(SelectedPage.Home)
   const [isTopOfPage, setIsTopOfPage] = useState<boolean>(true)
   const isDesktop = useMediaQuery("(min-width: 1060px")
+  const [isAppFlipped, setIsAppFlipped] = useState<boolean>(false)
 
   useEffect(() => {
     const handleScroll = () => {
@@ -34,6 +35,8 @@ function App() {
         isTopOfPage={isTopOfPage}
         selectedPage={selectedPage}
         setSelectedPage={setSelectedPage}
+        isAppFlipped={isAppFlipped}
+        setIsAppFlipped={setIsAppFlipped}
       />
 
       {isDesktop && <DotGroup selectedPage={selectedPage} setSelectedPage={setSelectedPage} />}
@@ -42,8 +45,9 @@ function App() {
         <motion.div
           onViewportEnter={() => setSelectedPage(SelectedPage.Home)}
         >
-          {/* <Landing setSelectedPage={setSelectedPage} /> */}
-          <LandingFliped setSelectedPage={setSelectedPage} />
+          {!isAppFlipped ? <Landing setSelectedPage={setSelectedPage} />
+            : <LandingFlipped setSelectedPage={setSelectedPage} />
+          }
 
         </motion.div>
       </div>
