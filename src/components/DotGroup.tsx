@@ -13,7 +13,7 @@ const DotGroup = ({ selectedPage, setSelectedPage }: Props) => {
     before:top-[-50%]`;
 
     return (
-        <div className="flex flex-col gap-6 fixed top-[60%] left-7">
+        <div className="flex flex-col gap-6 fixed top-[60%] right-7">
             <AnchorLink
                 href={hrefLink(selectedPage)}
                 className={`${selectedPage === SelectedPage.Home ? selectedStyles : "bg-dark-grey"

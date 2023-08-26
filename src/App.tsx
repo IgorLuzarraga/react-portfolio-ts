@@ -6,6 +6,7 @@ import DotGroup from "./components/DotGroup";
 import LineGradient from "./components/LineGradient";
 import { motion } from "framer-motion"
 import Landing from "./scenes/Landing";
+import MySkills from "./scenes/MySkills";
 
 function App() {
   const [selectedPage, setSelectedPage] = useState<SelectedPage>(SelectedPage.Home)
@@ -35,33 +36,27 @@ function App() {
 
       {isDesktop && <DotGroup selectedPage={selectedPage} setSelectedPage={setSelectedPage} />}
 
-      <div className="w-5/6 mx-auto md:h-full mb-[-200px]">
+      <div className="w-5/6 mx-auto md:h-full mb-[0px]">
         <motion.div
-          // margin="0 0 -200 0"
-          // className="w-5/6 mx-auto mb-[-200px]"
-          // amount="all"
           onViewportEnter={() => setSelectedPage(SelectedPage.Home)}
         >
           <Landing setSelectedPage={setSelectedPage} />
 
         </motion.div>
       </div>
+
       <LineGradient />
-      <div className="w-5/6 mx-auto md:h-full mb-[-200px]">
+
+      <div className="w-5/6 mx-auto md:h-full">
         <motion.div
-          // margin="0 0 -200px 0"
-          // amount="all"
           onViewportEnter={() => setSelectedPage(SelectedPage.Skills)}
         >
-          {/* <MySkills /> */}
-          MySkills
+          <MySkills />
         </motion.div>
       </div>
       <LineGradient />
-      <div className="w-5/6 mx-auto md:h-full mb-[-200px]">
+      <div className="w-5/6 mx-auto md:h-full">
         <motion.div
-          // margin="0 0 -200px 0"
-          // amount="all"
           onViewportEnter={() => setSelectedPage(SelectedPage.Projects)}
         >
           {/* <Projects /> */}
@@ -69,10 +64,8 @@ function App() {
         </motion.div>
       </div>
       <LineGradient />
-      <div className="w-5/6 mx-auto md:h-full mb-[-200px]">
+      <div className="w-5/6 mx-auto md:h-full">
         <motion.div
-          // margin="0 0 -200px 0"
-          // amount="all"
           onViewportEnter={() => setSelectedPage(SelectedPage.Testimonials)}
         >
           {/* <Testimonials /> */}
@@ -82,8 +75,6 @@ function App() {
       <LineGradient />
       <div className="w-5/6 mx-auto md:h-full">
         <motion.div
-          // margin="0 0 -200px 0"
-          // amount="all"
           onViewportEnter={() => setSelectedPage(SelectedPage.Contact)}
         >
           {/* <Contact /> */}

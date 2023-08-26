@@ -10,7 +10,8 @@ type Props = {
 }
 
 const Landing = ({ setSelectedPage }: Props) => {
-    const isAboveLarge = useMediaQuery("(min-width: 1060px)");
+    const isAboveLarge = useMediaQuery("(min-width: 1060px)")
+
     return (
         <section
             id={fromSelectedPageToPageId(SelectedPage.Home)}
@@ -51,15 +52,22 @@ const Landing = ({ setSelectedPage }: Props) => {
                         visible: { opacity: 1, x: 0 },
                     }}
                 >
-                    <p className="text-6xl font-playfair z-10 text-center md:text-start">
-                        Jane {""}
-                        <span
-                            className="xs:relative xs:text-deep-blue xs:font-semibold z-20 xs:before:content-brush
-              before:absolute before:-left-[25px] before:-top-[70px] before:z-[-1]"
+                    <div className="flex justify-center md:justify-normal gap-[15px] text-6xl font-playfair z-10">
+                        <p className="text-center md:text-start">
+                            Jane
+                        </p>
+
+                        <p
+                            className="xs:relative text-white md:text-deep-blue xs:font-semibold z-20 
+                            xs:before:content-brush before:absolute before:-left-[25px] 
+                            before:-top-[80px] before:z-[-1]"
                         >
                             Esper
-                        </span>
-                    </p>
+                        </p>
+
+                    </div>
+
+
 
                     <p className="mt-10 mb-7 text-sm text-center md:text-start">
                         Adipiscing arcu, in aliquam fringilla cursus. Elit arcu elementum
