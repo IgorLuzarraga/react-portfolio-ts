@@ -5,8 +5,10 @@ import useMediaQuery from "./hooks/useMediaQuery";
 import DotGroup from "./components/DotGroup";
 import LineGradient from "./components/LineGradient";
 import { motion } from "framer-motion"
-import Landing from "./scenes/Landing";
+// import Landing from "./scenes/landing/Landing";
+import LandingFliped from "./scenes/landing/LandingFliped";
 import MySkills from "./scenes/MySkills";
+
 
 function App() {
   const [selectedPage, setSelectedPage] = useState<SelectedPage>(SelectedPage.Home)
@@ -40,7 +42,8 @@ function App() {
         <motion.div
           onViewportEnter={() => setSelectedPage(SelectedPage.Home)}
         >
-          <Landing setSelectedPage={setSelectedPage} />
+          {/* <Landing setSelectedPage={setSelectedPage} /> */}
+          <LandingFliped setSelectedPage={setSelectedPage} />
 
         </motion.div>
       </div>

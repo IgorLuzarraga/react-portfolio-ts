@@ -44,7 +44,7 @@ const NavSmallScreen = ({ selectedPage, setSelectedPage }: Props) => {
 
 const Btn3Bars = ({ isMenuToggled, setIsMenuToggled }: Btn3BarsProps) =>
     <button
-        className='rounded-full bg-pink-500 p-2'
+        className='rounded-full bg-red p-2'
         onClick={() => setIsMenuToggled(!isMenuToggled)}
     >
         <Bars3Icon className='w-6 h-6 text-white' />
