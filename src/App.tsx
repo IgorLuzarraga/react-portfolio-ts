@@ -7,7 +7,8 @@ import LineGradient from "./components/LineGradient";
 import { motion } from "framer-motion"
 import Landing from "./scenes/landing/Landing";
 import LandingFlipped from "./scenes/landing/LandingFlipped";
-import MySkills from "./scenes/MySkills";
+import MySkills from "./scenes/mySkills/MySkills";
+import MySkillsFlipped from "./scenes/mySkills/MySkillsFlipped";
 
 
 function App() {
@@ -58,7 +59,8 @@ function App() {
         <motion.div
           onViewportEnter={() => setSelectedPage(SelectedPage.Skills)}
         >
-          <MySkills />
+          {!isAppFlipped ? <MySkills /> : <MySkillsFlipped />}
+
         </motion.div>
       </div>
       <LineGradient />
