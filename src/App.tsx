@@ -10,6 +10,7 @@ import LandingFlipped from "./scenes/landing/LandingFlipped";
 import MySkills from "./scenes/mySkills/MySkills";
 import MySkillsFlipped from "./scenes/mySkills/MySkillsFlipped";
 import Projects from "./scenes/projects/Projects";
+import ProjectsFlipped from "./scenes/projects/ProjectsFlipped";
 
 function App() {
   const [selectedPage, setSelectedPage] = useState<SelectedPage>(SelectedPage.Home)
@@ -72,7 +73,8 @@ function App() {
         <motion.div
           onViewportEnter={() => setSelectedPage(SelectedPage.Projects)}
         >
-          <Projects />
+          {!isAppFlipped ? <Projects /> : <ProjectsFlipped />}
+
         </motion.div>
       </div>
       <LineGradient />

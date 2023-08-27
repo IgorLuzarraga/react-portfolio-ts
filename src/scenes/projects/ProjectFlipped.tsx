@@ -9,7 +9,7 @@ type Props = {
     title: string
 }
 
-const Project = ({ title }: Props) => {
+const ProjectFlipped = ({ title }: Props) => {
     const overlayStyles = `absolute h-full w-full opacity-0 hover:opacity-90 transition duration-500
     bg-grey z-30 flex flex-col justify-center items-center text-center p-16 text-deep-blue`;
 
@@ -18,7 +18,7 @@ const Project = ({ title }: Props) => {
     return (
         <motion.div
             className="relative"
-            // transition={{ delay: 0.2, duration: 1 }}
+            transition={{ delay: 0.2, duration: 1 }}
             variants={projectVariant}
         >
             <div className={overlayStyles}>
@@ -33,4 +33,4 @@ const Project = ({ title }: Props) => {
     );
 };
 
-export default Project
+export default ProjectFlipped
