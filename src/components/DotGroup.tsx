@@ -4,16 +4,17 @@ import { fromSelectedPageToPageName } from "../utilities/utils";
 
 type Props = {
     selectedPage: SelectedPage,
-    setSelectedPage: (value: SelectedPage) => void
+    setSelectedPage: (value: SelectedPage) => void,
+    position: string
 }
 
-const DotGroup = ({ selectedPage, setSelectedPage }: Props) => {
+const DotGroup = ({ selectedPage, setSelectedPage, position }: Props) => {
     const selectedStyles = `relative bg-yellow before:absolute before:w-6 before:h-6 
     before:rounded-full before:border-2 before:border-yellow before:left-[-50%] 
     before:top-[-50%]`;
 
     return (
-        <div className="flex flex-col gap-6 fixed top-[60%] right-7">
+        <div className={`flex flex-col gap-6 fixed top-[60%] ${position}`}>
             <AnchorLink
                 href={hrefLink(selectedPage)}
                 className={`${selectedPage === SelectedPage.Home ? selectedStyles : "bg-dark-grey"

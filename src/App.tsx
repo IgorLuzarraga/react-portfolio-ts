@@ -9,7 +9,7 @@ import Landing from "./scenes/landing/Landing";
 import LandingFlipped from "./scenes/landing/LandingFlipped";
 import MySkills from "./scenes/mySkills/MySkills";
 import MySkillsFlipped from "./scenes/mySkills/MySkillsFlipped";
-
+import Projects from "./scenes/projects/Projects";
 
 function App() {
   const [selectedPage, setSelectedPage] = useState<SelectedPage>(SelectedPage.Home)
@@ -40,7 +40,11 @@ function App() {
         setIsAppFlipped={setIsAppFlipped}
       />
 
-      {isDesktop && <DotGroup selectedPage={selectedPage} setSelectedPage={setSelectedPage} />}
+      {isDesktop && (
+        !isAppFlipped
+          ? <DotGroup selectedPage={selectedPage} setSelectedPage={setSelectedPage} position="right-7" />
+          : <DotGroup selectedPage={selectedPage} setSelectedPage={setSelectedPage} position="left-7" />
+      )}
 
       <div className="w-5/6 mx-auto md:h-full mb-[0px]">
         <motion.div
@@ -68,8 +72,7 @@ function App() {
         <motion.div
           onViewportEnter={() => setSelectedPage(SelectedPage.Projects)}
         >
-          {/* <Projects /> */}
-          Projects
+          <Projects />
         </motion.div>
       </div>
       <LineGradient />
