@@ -11,6 +11,8 @@ import MySkills from "./scenes/mySkills/MySkills";
 import MySkillsFlipped from "./scenes/mySkills/MySkillsFlipped";
 import Projects from "./scenes/projects/Projects";
 import ProjectsFlipped from "./scenes/projects/ProjectsFlipped";
+import Testimonials from "./scenes/testimonials/Testimonials";
+import TestimonialsFlipped from "./scenes/testimonials/TestimonialFlipped";
 
 function App() {
   const [selectedPage, setSelectedPage] = useState<SelectedPage>(SelectedPage.Home)
@@ -82,8 +84,8 @@ function App() {
         <motion.div
           onViewportEnter={() => setSelectedPage(SelectedPage.Testimonials)}
         >
-          {/* <Testimonials /> */}
-          Testimonials
+          {!isAppFlipped ? <Testimonials /> : <TestimonialsFlipped />}
+
         </motion.div>
       </div>
       <LineGradient />

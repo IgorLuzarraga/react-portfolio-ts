@@ -36,8 +36,6 @@ const Projects = () => {
                     <Project title="Project 2" />
                     <Project title="Project 1" />
 
-
-
                     {/* ROW 2 */}
                     <Project title="Project 3" />
                     <Project title="Project 4" />
