@@ -7,7 +7,7 @@ import TestimonialsHeadings from "./TestimonialsHeadings";
 
 const Testimonials = () => {
     return (
-        <section id={fromSelectedPageToPageId(SelectedPage.Testimonials)} className="pt-32 pb-16">
+        <section id={fromSelectedPageToPageId(SelectedPage.Testimonials)} className="pt-32 pb-32">
 
             {/* HEADING */}
             <TestimonialsHeadings headingInitPos={-50} />

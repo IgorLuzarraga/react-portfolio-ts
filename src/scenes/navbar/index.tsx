@@ -26,7 +26,6 @@ const BtnFlipApp = ({ isAppFlipped, setIsAppFlipped }: BtnFlipAppProps) =>
     </button>
 
 const NavBar = ({ isTopOfPage, selectedPage, setSelectedPage, isAppFlipped, setIsAppFlipped }: Props) => {
-    // const [isAppFlipped, setIsAppFlipped] = useState<boolean>(false)
     const isAboveMediumScreens = useMediaQuery("(min-width: 1060px")
     const navbarBackground = isTopOfPage ? "" : "bg-red shadow-2xl"
 

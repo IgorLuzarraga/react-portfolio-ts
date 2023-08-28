@@ -16,7 +16,7 @@ const LandingFlipped = ({ setSelectedPage }: Props) => {
     return (
         <section
             id={fromSelectedPageToPageId(SelectedPage.Home)}
-            className="md:flex justify-between items-center gap-16 md:h-full py-10"
+            className="md:flex justify-between items-center gap-16 md:h-full py-10 mb-28"
         >
             {/* IMAGE */}
             <LandingImgFlipped isAboveLarge={isAboveLarge} />
