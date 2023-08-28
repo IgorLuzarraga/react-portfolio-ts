@@ -15,6 +15,8 @@ import Testimonials from "./scenes/testimonials/Testimonials";
 import TestimonialsFlipped from "./scenes/testimonials/TestimonialFlipped";
 import Contact from "./scenes/contact/Contact";
 import ContactFlipped from "./scenes/contact/ContactFlipped";
+import Footer from "./scenes/footer/Footer";
+import FooterFlipped from "./scenes/footer/FooterFlipped";
 
 function App() {
   const [selectedPage, setSelectedPage] = useState<SelectedPage>(SelectedPage.Home)
@@ -100,8 +102,9 @@ function App() {
 
         </motion.div>
       </div>
-      {/* <Footer /> */}
-      Footer
+
+      {!isAppFlipped ? <Footer /> : <FooterFlipped />}
+
     </div>
   );
 }
