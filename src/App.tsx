@@ -13,6 +13,8 @@ import Projects from "./scenes/projects/Projects";
 import ProjectsFlipped from "./scenes/projects/ProjectsFlipped";
 import Testimonials from "./scenes/testimonials/Testimonials";
 import TestimonialsFlipped from "./scenes/testimonials/TestimonialFlipped";
+import Contact from "./scenes/contact/Contact";
+import ContactFlipped from "./scenes/contact/ContactFlipped";
 
 function App() {
   const [selectedPage, setSelectedPage] = useState<SelectedPage>(SelectedPage.Home)
@@ -93,8 +95,9 @@ function App() {
         <motion.div
           onViewportEnter={() => setSelectedPage(SelectedPage.Contact)}
         >
-          {/* <Contact /> */}
-          Contact
+
+          {!isAppFlipped ? <Contact /> : <ContactFlipped />}
+
         </motion.div>
       </div>
       {/* <Footer /> */}
