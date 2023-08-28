@@ -1,10 +1,10 @@
 import useMediaQuery from "../../hooks/useMediaQuery";
 import { SelectedPage } from "../../share/types";
 import { fromSelectedPageToPageId } from "../../utilities/utils";
-import LandingImg from "./LandingImg";
 import ContactMeBtns from "./ContactMeBtns";
 import SocialMediaBtns from "./SocialMediaBtns";
 import LandingText from "./LandingText";
+import LandingImgFlipped from "./LandingImgFlipped";
 
 type Props = {
     setSelectedPage: (value: SelectedPage) => void
@@ -19,7 +19,7 @@ const LandingFlipped = ({ setSelectedPage }: Props) => {
             className="md:flex justify-between items-center gap-16 md:h-full py-10"
         >
             {/* IMAGE */}
-            <LandingImg isAboveLarge={isAboveLarge} archPosition="left-10" />
+            <LandingImgFlipped isAboveLarge={isAboveLarge} />
 
             {/* TEXT AND CONTACT */}
             <div className="z-30 basis-2/5 mt-12 md:mt-32">

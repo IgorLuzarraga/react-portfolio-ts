@@ -31,7 +31,7 @@ const Landing = ({ setSelectedPage }: Props) => {
             </div>
 
             {/* IMAGE */}
-            <LandingImg isAboveLarge={isAboveLarge} archPosition="-left-10" />
+            <LandingImg isAboveLarge={isAboveLarge} />
         </section>
     );
 };
