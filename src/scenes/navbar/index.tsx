@@ -32,20 +32,39 @@ const NavBar = ({ isTopOfPage, selectedPage, setSelectedPage, isAppFlipped, setI
     return (
         <nav className={`${navbarBackground} z-40 w-full fixed top-0 py-6`}>
             <div className="flex items-center justify-between mx-auto w-5/6">
-                <h4 className="font-playfair text-3xl font-bold">JE</h4>
+                {/* <h4 className="font-playfair text-3xl font-bold">JE</h4> */}
 
                 {isAboveMediumScreens
                     ? <>
-                        <BtnFlipApp isAppFlipped={isAppFlipped} setIsAppFlipped={setIsAppFlipped} />
-                        <NavAvobeMediumScreen
+                        {!isAppFlipped
+                            ?
+                            <>
+                                <h4 className="font-playfair text-3xl font-bold">JE</h4>
+                                <BtnFlipApp isAppFlipped={isAppFlipped} setIsAppFlipped={setIsAppFlipped} />
+                                <NavAvobeMediumScreen
+                                    selectedPage={selectedPage}
+                                    setSelectedPage={setSelectedPage}
+                                />
+                            </>
+                            :
+                            <>
+                                <NavAvobeMediumScreen
+                                    selectedPage={selectedPage}
+                                    setSelectedPage={setSelectedPage}
+                                />
+                                <BtnFlipApp isAppFlipped={isAppFlipped} setIsAppFlipped={setIsAppFlipped} />
+                                <h4 className="font-playfair text-3xl font-bold">JE</h4>
+                            </>
+                        }
+                    </>
+                    :
+                    <>
+                        <h4 className="font-playfair text-3xl font-bold">JE</h4>
+                        <NavSmallScreen
                             selectedPage={selectedPage}
                             setSelectedPage={setSelectedPage}
                         />
                     </>
-                    : <NavSmallScreen
-                        selectedPage={selectedPage}
-                        setSelectedPage={setSelectedPage}
-                    />
                 }
 
             </div>
