@@ -81,14 +81,15 @@ const ContactForm = () => {
                 {errors.message && (
                     <p className="text-red mt-1">
                         {errors.message.type === "required" &&
-                            "This field is required."}
+                            "This field is required!"}
                         {errors.message.type === "maxLength" &&
-                            "Max length is 2000 char."}
+                            "Max length is 2000 char!"}
                     </p>
                 )}
 
                 <button
-                    className="p-5 bg-yellow font-semibold text-deep-blue mt-5 hover:bg-red hover:text-white transition duration-500"
+                    className="p-5 bg-yellow text-deep-blue font-semibold hover:bg-red 
+                    hover:text-white transition duration-500"
                     type="submit"
                 >
                     SEND ME A MESSAGE
